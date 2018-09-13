@@ -16,9 +16,9 @@ namespace OOP_RPG
             this.hero = hero;
             this.game = game;
             this.AddMonster("Squid", 9, 8, 20);
-            this.AddMonster("b", 6, 7, 19);
-            this.AddMonster("c", 11, 3, 18);
-            this.AddMonster("l", 6, 6, 20);
+            this.AddMonster("Judo", 6, 7, 19);
+            this.AddMonster("Lancer", 11, 3, 18);
+            this.AddMonster("Charger", 6, 6, 20);
             var lastmonster = (from c in this.Monsters select c).Last();
             var secondmonster = this.Monsters[1];
             var RandoMonster = this.Monsters.OrderBy(p => Guid.NewGuid()).FirstOrDefault();
@@ -37,8 +37,6 @@ namespace OOP_RPG
         }
         
         public void Start() {
-            
-          
             Console.WriteLine("You've encountered a " + monster.Name + "! " + monster.Strength + " Strength/" + monster.Defense + " Defense/" +
             monster.CurrentHP + " HP. What will you do?");
             Console.WriteLine("1. Fight");
@@ -99,7 +97,7 @@ namespace OOP_RPG
         
         public void Win() {
             Console.WriteLine(monster.Name + " has been defeated! You win the battle!");
-            hero.Gold = monster.Gold;
+            hero.Gold += monster.Gold;
             Console.WriteLine();
              game.Main();
 
