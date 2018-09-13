@@ -99,7 +99,10 @@ namespace OOP_RPG
         
         public void Win() {
             Console.WriteLine(monster.Name + " has been defeated! You win the battle!");
-            game.Main();
+            hero.Gold = monster.Gold;
+            Console.WriteLine();
+             game.Main();
+
         }
         
         public void Lose() {
