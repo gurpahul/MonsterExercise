@@ -3,8 +3,6 @@ namespace OOP_RPG
 {
     public class Weapon : Item
     {
-       
-
         public Weapon(string name, int strength, int originalvalue, int resellvalue, int index) {
             this.Name = name;
             this.Strength = strength;
