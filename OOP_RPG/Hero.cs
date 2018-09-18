@@ -20,7 +20,7 @@ namespace OOP_RPG
             this.Defense = 10;
             this.OriginalHP = 30;
             this.CurrentHP = 30;
-            this.Gold = 0;
+            this.Gold = 9;
             
         }
         
